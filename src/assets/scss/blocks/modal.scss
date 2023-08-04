@@ -1,0 +1,62 @@
+@use '../variables.scss' as *;
+@use '../mixins/mixin.scss' as *;
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(0, 0, 0);
+    top: 0;
+    left:0;
+    @include adaptive-value("font-size", 14, 12, 1);
+
+    &__wrapper {
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: rem(30) rem(20);
+
+    }
+
+    &__content {
+        background-color: rgba(171, 251, 173, 0.95);
+        max-width: rem(600);
+        padding: rem(30);
+        border-radius: rem(35);
+
+    }
+
+    &__title {
+        @include adaptive-value("font-size", 18, 14, 1);
+        font-weight: 700;
+
+    }
+
+    &__list {
+        padding-bottom: rem(10);
+
+        &-item {
+            padding: rem(5) 0;
+            line-height: 1.5;
+
+        }
+
+    }
+
+    &__text {
+        padding: rem(5) 0 rem(15);
+        line-height: 1.5;
+
+    }
+
+    &__btn {
+        background-color: rgb(12, 39, 39);
+        color: rgb(275, 275, 275);
+        @include adaptive-value("font-size", 14, 12, 1);
+
+    }
+
+} 

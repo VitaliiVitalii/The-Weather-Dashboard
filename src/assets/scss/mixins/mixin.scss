@@ -1,0 +1,70 @@
+@use '../variables.scss' as *;
+
+//function to convert px to rem
+@function rem($value) {
+    $remValue: calc($value / 16) + rem;
+    @return $remValue;
+
+}
+
+//media request
+@mixin media($breakpoint) {
+    @media screen and (max-width:$breakpoint) {
+        @content;
+
+    }
+
+}
+
+//adaptive mixin
+@mixin adaptive-value($property, $startSize, $minSize, $type) {
+    $addSize: $startSize - $minSize;
+    $startSizeInRem: calc($startSize / 16);
+    $minSizeInRem: calc($minSize / 16); 
+
+    @if $type ==1 {
+        // if less container
+        #{$property}: $startSizeInRem + rem;
+
+        @media (max-width: 767px) {
+            #{$property}: calc(#{$minSizeInRem + rem} + #{$addSize} * ((100vw - 375px) / #{$maxWidthContainer - 375}));
+        }
+    }
+
+    @else if $type ==2 {
+        // if over container
+        #{$property}: $startSizeInRem + rem;
+
+        @media (min-width: 767px) {
+            #{$property}: calc(#{$minSizeInRem + rem} + #{$addSize} * ((100vw - 375px) / #{$maxWidth - 375}));
+        }
+    }
+
+    @else {
+        // always
+        #{$property}: calc(#{$minSizeInRem + rem} + #{$addSize} * ((100vw - 375px) / #{$maxWidth - 375}));
+    }
+}
+
+
+//custom scrollbar
+@mixin scrollbar($selector, $track-border-color, $track-bg-color, $thumb-bg-color, $thumb-width) {
+    #{$selector}::-webkit-scrollbar-track {
+        border: 1px solid $track-border-color;
+        background-color: $track-bg-color;
+
+    }
+
+    #{$selector}::-webkit-scrollbar {
+        width: $thumb-width;
+        height: $thumb-width;
+        background-color: $track-bg-color;
+
+    }
+
+    #{$selector}::-webkit-scrollbar-thumb {
+        background-color: $track-border-color;
+
+    }
+
+}

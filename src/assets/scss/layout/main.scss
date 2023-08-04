@@ -1,0 +1,22 @@
+@use '../variables.scss' as *;
+@use '../mixins/mixin.scss' as *;
+@use '../blocks/search.scss' as *;
+
+.main {
+    flex: 1 1 auto;
+
+    &__container {
+        margin-top: rem(30);
+        flex-direction: column;
+
+    }
+
+    &__city-list {
+        flex-direction: column;
+        align-items: center;
+        padding-top: rem(10);
+
+    }
+
+}
+

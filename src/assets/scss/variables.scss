@@ -1,0 +1,55 @@
+/*************** Fonts ***************/
+$font_primary: 'Roboto', sans-serif;
+$font_secondary: 'Poppins', sans-serif;
+$fontSize: 14;
+/**************** Colors ***************/
+$crl-citesCard: rgb(255, 255, 255);
+$crl-citesCard-secondary: rgba(139, 139, 255, 0.6);
+$crl-secondary-dark: rgba(0, 0, 0, 0.2);
+$crl-secondary-ligth: rgba(130, 130, 132, 1);
+/**************** Button color *********/ 
+$clr-btn-success: rgba(158, 206, 106,1);
+$clr-btn-info: rgba(42, 195, 222,1);
+$clr-btn-danger: rgba(249, 77, 108,1);
+/***** Padding ******/
+$padding: 15;
+$containermPadding: 15;
+/*************** Width ***************/
+$minWidth: 375;
+$maxWidthContainer: 1024;
+$maxWidth: calc($maxWidthContainer + $containermPadding * 2);
+/*************** Breakpoints ***************/
+$mob_min: 375px;
+$mob_L: 425px;
+$tablet: 768px;
+//***********Light theme***********//
+:root {
+    --bg-clr-primary: rgba(250, 250, 253, 1);
+    --bg-clr-secondary: rgba(213, 215, 214, 1);
+    --bg-clr-search: rgba(235, 235, 241, 0.8);
+    --bg-main-card: rgba(255, 216, 89, 0.5);
+    --bg-item:rgba(0, 0, 0, 0.2);
+    --bg-clr-btn:rgb(154, 163, 183);
+    --clr-primary: rgba(0, 0, 0, 1);
+    --crl-accent: rgba(14, 19, 31, 0.4);
+    //cards of cities
+    --bg-crl-rain: rgba(106, 109, 137, 1);
+    --bg-crl-clouds: rgba(142, 158, 241, 1);
+    --bg-crl-sun: rgba(250, 149, 30, 1);
+}
+//***********Dark theme***********//
+body.dark {
+    --bg-clr-primary: rgba(27, 30, 46, 1);
+    --bg-clr-secondary:rgb(14, 19, 31);
+    --bg-clr-search: rgba(48, 50, 65, 1);
+    --bg-main-card: rgba(165, 226, 255, 0.5);
+    --bg-item: rgba(165, 226, 255, 0.5);
+    --bg-clr-btn: rgb(22, 48, 95);
+    --clr-primary: rgba(255, 255, 255, 1);
+    --crl-accent: rgba(214, 218, 252, 0.3);
+    //cards of cities
+    --bg-crl-rain: rgba(106, 109, 137, 0.5);
+    --bg-crl-clouds: rgba(142, 158, 241, 0.5);
+    --bg-crl-sun: rgba(250, 149, 30, 0.4);
+    
+}

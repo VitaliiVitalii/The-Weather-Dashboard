@@ -1,0 +1,122 @@
+@use '../variables.scss' as *;
+@use '../mixins/mixin.scss' as *;
+
+.city-list {
+    cursor: pointer;
+    max-width: rem(550);
+    max-height:rem(100);
+    width: 100%;
+    margin: rem(10) 0 0 0;
+
+    &__temp {
+        font-size: rem(40);
+        font-weight: 500;
+        grid-column-start: 1;
+        margin-right: rem(10);
+        padding-right: rem(10);
+        border-right: 1px solid $crl-citesCard;
+        @include adaptive-value("min-width", 140, 100, 1);
+
+    }
+
+    &__current-info {
+        grid-area: 2 / 2;
+        margin-left: 0.5vw;
+
+    }
+
+    &__time {
+        @include adaptive-value("padding-bottom", 10, 5, 1);
+        
+        i {
+            padding-right: 5px;
+
+        }
+
+    }
+
+    &__disc {
+
+        i {
+            padding-right: 5px;
+        }
+        
+    }
+
+    &__city {
+        grid-area: 1 / 3;
+        background-color: $crl-citesCard-secondary;
+        padding: 5px;
+        border-radius: rem(10);
+        backdrop-filter: blur(5px) saturate(10);
+        text-align: center;
+        
+        i {
+            padding-right: 5px;
+
+        }
+
+    }
+
+    &__temp-amplitude {
+        text-align: end;
+
+        p {
+            margin-top: 5px;
+
+        }
+
+    }
+
+    &__fallback {
+        @include adaptive-value("font-size", 16, 14, 1);
+        padding: rem(40) 0;
+        line-height: 1.2;
+        text-align: center;
+
+    }
+
+}
+
+.list-wrapper {
+    flex: 1 1 auto;
+    grid-template-columns: 0.5fr 1fr auto;
+    @include adaptive-value("padding", 15, 10, 1);
+    border-radius: rem(15);
+    color: $crl-citesCard;
+    align-items: center;
+    border: 1px solid transparent;
+    outline: 1px solid transparent;
+    outline-offset: 2px;
+    transition-duration: 0.3s;
+
+    &:hover {
+        border-color: var(--crl-accent);
+        outline-color: var(--crl-accent);
+        transform: scale(0.98);
+        opacity: 0.6;
+
+    }
+
+    &:active, &:focus {
+        transform: scale(0.95);
+        
+    }
+
+}
+
+// background color relative to the forecast
+.sunny {
+    background-color: var(--bg-crl-sun);
+
+}
+
+.rainy {
+    background-color: var(--bg-crl-rain);
+
+}
+
+.default {
+    background-color: var(--bg-crl-clouds);
+
+}

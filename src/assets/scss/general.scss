@@ -1,0 +1,52 @@
+@use './variables.scss' as *;
+@use './mixins/mixin.scss' as *;
+
+body {
+    font-family: $font_primary;
+    font-size: rem($fontSize);
+    position: relative;
+    background-color: var(--bg-clr-primary);
+    color: var(--clr-primary);
+
+}
+
+@include scrollbar('body', var(--crl-accent), var(--bg-clr-primary), var(--crl-accent), 6px);
+
+.wrapper {
+    min-height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+
+}
+
+[class*="__container"] {
+    max-width: rem($maxWidth);
+    margin: 0 auto;
+    padding: 0 rem($padding);
+
+}
+
+.flex {
+    display: flex;
+
+}
+
+.grid {
+    display: grid;
+
+}
+
+.item-wrap {
+    background-color: var(--bg-clr-search);
+    padding: 5px;
+    border-radius: rem(10);
+    backdrop-filter: blur(5px) saturate(10);
+    text-align: center;
+
+}
+
+.grows {
+    flex: 1 1 auto;
+    
+}
+

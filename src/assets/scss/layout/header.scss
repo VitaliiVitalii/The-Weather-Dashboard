@@ -1,0 +1,56 @@
+@use '../variables.scss' as *;
+@use '../mixins/mixin.scss' as *;
+
+.header {
+    background-color: var(--bg-clr-secondary);
+
+    &__container {
+        max-height: rem(70);
+        padding-top: rem(15);
+        padding-bottom: rem(15);
+        align-items: center;
+        column-gap: rem(10);
+        
+    }
+
+    &__menu {
+        flex: 1 1 auto;
+        align-items: center;
+        justify-content: flex-end;
+
+    }
+
+    &__btn-group {
+        gap: rem(10);
+        flex-wrap: wrap;
+        align-items: center;
+
+    }
+
+    .logo__box {
+        align-items: center;
+    
+        .logo__img {
+            width: rem(45);
+            height: rem(45);
+            fill: var(--clr-primary);
+    
+            
+        }
+        
+        .logo__text {
+            color: var(--clr-primary);
+            width: rem(80);
+            font-weight: 700;
+            font-family: $font_secondary;
+            line-height: 0.95;
+    
+        }
+        
+    }
+    
+}
+
+
+
+

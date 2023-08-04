@@ -1,0 +1,46 @@
+@use '../../variables.scss' as *;
+@use '../../mixins/mixin.scss' as *;
+
+.hourly-weather {
+    font-size: rem(14);
+    padding: rem(40) 0 0 0;
+
+    &__wrapper {
+        max-width: rem(620);
+        margin: 0 auto;
+
+    }
+
+    &__title {
+        font-size: rem(20);
+        font-weight: 500;
+        @include adaptive-value("padding-bottom", 25, 15, 1);
+
+    }
+
+    &__list {
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: rem(10);
+
+        img {
+            width: rem(50);
+            
+        }
+        
+    }
+    
+    @include scrollbar('.hourly-weather__list', var(--crl-accent), var(--bg-clr-primary), var(--crl-accent), 6px);
+
+    &__items {
+        background-color: var(--bg-item);
+        padding: rem(5);
+        border-radius: rem(10);
+        backdrop-filter: blur(17px);
+        text-align: center;
+        margin: 0 0 rem(15) 0;
+        max-width: rem(120);
+
+    }
+
+}
