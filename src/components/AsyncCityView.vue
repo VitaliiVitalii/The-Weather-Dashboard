@@ -165,17 +165,22 @@ const getWeatherData = async () => {
     weatherData.data.hourly.forEach((hour) => {
       const utc = hour.dt * 1000 + localOffset;
       hour.currentTime = utc + 1000 * weatherData.data.timezone_offset;
+
     });
 
     //Loading delay
-    await new Promise((res) => setTimeout(res, 600));
+    await new Promise((res) => setTimeout(res, 1100));
 
     return weatherData.data;
 
   } catch (error) {
-    console.log(error);
+    console.error("Error fetching weather data:", error);
+    return null; 
+
   }
+
 };
+
 
 const weatherData = await getWeatherData();
 

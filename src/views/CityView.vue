@@ -11,12 +11,7 @@
 
 <script setup>
     import AsyncCityView from '../components/AsyncCityView.vue';
-import BaseLoading from '../components/UI/BaseLoading.vue';
-
+    import BaseLoading from '../components/UI/BaseLoading.vue';
 
 </script>
-
-<style lang="scss">
-
-</style>
 

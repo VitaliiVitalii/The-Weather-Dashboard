@@ -61,8 +61,6 @@ const props = defineProps({
     },
 });
 
-console.log(props.city)
-
 const currentTime = ref('');
 
 onMounted(() => {
