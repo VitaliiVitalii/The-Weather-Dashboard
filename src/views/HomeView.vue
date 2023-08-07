@@ -134,7 +134,9 @@ const getCityNameFromCoordinates = async (latitude, longitude) => {
         const response = await axios.get(apiUrl);
         const cityData = response.data.features.find(
             (feature) => feature.place_type.includes("place")
+            
         );
+
         if (cityData) {
             const cityName = cityData.text;
             return cityName;
@@ -143,7 +145,9 @@ const getCityNameFromCoordinates = async (latitude, longitude) => {
         }
     } catch (error) {
         throw new Error("Error fetching city information.");
+
     }
+
 };
 
 const clearText = () => {

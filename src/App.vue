@@ -12,7 +12,7 @@
 
 <script setup>
 import TheFooter from './components/layout/TheFooter.vue';
-import TheHeader from './components/layout/theHeader.vue';
+import TheHeader from './components/layout/TheHeader.vue';
 
 </script>
 

@@ -2,7 +2,7 @@
     <div class="grows">
         <Suspense>
             <AsyncCityView/>
-            <template  #fallback >
+            <template #fallback >
                 <BaseLoading/>
             </template>
         </Suspense>

@@ -101,7 +101,7 @@ const addCity = () => {
 };
 
 //modal window
-const modalActive = ref(null);
+const modalActive = ref(false);
 
 const toggleModal = () => {
     modalActive.value = !modalActive.value;
@@ -128,14 +128,7 @@ watch(theme, (newVal) => {
 });
 
 onBeforeMount(() => {
-    if (localStorage.getItem('theme') === 'dark') {
-        theme.value = true;
-
-    } else {
-        theme.value = false;
-
-    }
-    
+    theme.value = localStorage.getItem('theme') === 'dark';
 });
 
 </script>
