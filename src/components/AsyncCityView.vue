@@ -42,7 +42,7 @@
       </div>
       <div class="info-card__img">
         <img
-          :src="`http://openweathermap.org/img/wn/${weatherData.current.weather[0].icon}@2x.png`"
+          :src="`https://openweathermap.org/img/wn/${weatherData.current.weather[0].icon}@2x.png`"
           alt="weather icon"
         />
       </div>
@@ -91,7 +91,7 @@
               }}
             </p>
             <img
-              :src="`http://openweathermap.org/img/wn/${hourlyItem.weather[0].icon}@2x.png`"
+              :src="`https://openweathermap.org/img/wn/${hourlyItem.weather[0].icon}@2x.png`"
               alt="hourly weather term"
             />
             <p class="text-xl">{{ Math.round(hourlyItem.temp) }}&deg;C</p>
@@ -111,7 +111,7 @@
           >
             <div class="daily-weather__card-item">
               <img
-                :src="`http://openweathermap.org/img/wn/${dayItem.weather[0].icon}@2x.png`"
+                :src="`https://openweathermap.org/img/wn/${dayItem.weather[0].icon}@2x.png`"
                 alt="day info"
               />
             </div>
@@ -180,7 +180,6 @@ const getWeatherData = async () => {
   }
 
 };
-
 
 const weatherData = await getWeatherData();
 

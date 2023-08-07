@@ -27,31 +27,27 @@
                     <div class="modal__content">
                         <h2 class="modal__title">About:</h2>
                         <p class="modal__text">
-                            The weather dashboard allows you to track the current and the future weather of the city of your choice.
+                            The weather dashboard allows you to track the current and the future weather of the city of your choice. 
                         </p>
                         <h3 class="modal__title">How it works:</h3>
                         <ol class="modal__list">
                             <li class="modal__list-item">
-                                Find your city by entering the name in the field search bar or click the "<span><i class="fa-solid fa-location-crosshairs"></i></span>" icon to find your current location. 
+                                Find your city by entering the name in the search bar field or click the "<span><i class="fa-solid fa-location-crosshairs"></i></span>"  icon to find your current location. 
                             </li>
                             <li class="modal__list-item">
-                                Select a city from the results, this will take you to the current weather.
+                                Select a city from results and you will get information about current weather in this area. 
                             </li>
                             <li class="modal__list-item">
-                                Track the city by clicking on the "<span><i class="fa-solid fa-plus"></i></span>" button in the
-                                top right. This will save the city to view at a
-                                later time on the home page.
+                                Track the city by clicking on the "<span><i class="fa-solid fa-plus"></i></span>" button in the top right. This will save the information to view later on your home page.
                             </li>
                         </ol>
                         <h3 class="modal__title">Removing a city</h3>
                         <p class="modal__text">
-                            If you no longer wish to track a city, simply select
-                            the city within the home page. At the bottom of the
-                            page, there will be am option to delete the city.
+                            If you no longer wish to track a city, then select it within the home page. At the bottom of the page, there will be am option to delete the city.
                         </p>
                         <button class="modal__btn btn btn__info" @click="toggleModal">
-                        <span class="btn__icon"><i class="fa-solid fa-xmark"></i></span>Close
-                    </button>
+                            <span class="btn__icon"><i class="fa-solid fa-xmark"></i></span>Close
+                        </button>
                     </div>
                 </base-modal>
             </div>
