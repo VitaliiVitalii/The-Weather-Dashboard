@@ -67,4 +67,10 @@
 
     }
 
+    #{$selector} {
+        scrollbar-width: thin;
+        scrollbar-color: $track-border-color $track-bg-color;
+        
+    }
+
 }

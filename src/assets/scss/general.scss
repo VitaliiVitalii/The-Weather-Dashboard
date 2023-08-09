@@ -1,6 +1,12 @@
 @use './variables.scss' as *;
 @use './mixins/mixin.scss' as *;
 
+html {
+    scrollbar-width: thin;
+    scrollbar-color:  var(--bg-clr-primary);
+    
+}
+
 body {
     font-family: $font_primary;
     font-size: rem($fontSize);

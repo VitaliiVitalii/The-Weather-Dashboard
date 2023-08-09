@@ -189,7 +189,9 @@ const removeCity = () => {
   localStorage.setItem("savedCities", JSON.stringify(updatedCities));
   router.push({
     name: "home",
+
   });
+  
 };
 
 // The first letter is capitalized
@@ -200,6 +202,7 @@ const capitalizedWeatherDesc = computed(() => {
   }
   return "";
 });
+
 </script>
 
 <style lang="scss" scoped>

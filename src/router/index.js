@@ -12,6 +12,7 @@ const router = createRouter({
       name: "home",
       meta: {
         title: "Home"
+
       }
 
     },
@@ -21,11 +22,13 @@ const router = createRouter({
       name: "city",
       meta: {
         title: "Weather"
+
       }
 
     },
 
   ],
+
 });
 
 router.beforeEach((to, from, next) => {
@@ -35,6 +38,7 @@ router.beforeEach((to, from, next) => {
       : to.meta.title
   } | The Local Weather`;
   next();
+
 });
 
-export default router
+export default router;
