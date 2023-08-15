@@ -3,9 +3,9 @@
         <div class="main__container flex">
             <section class="search">
                 <div class="search__bar">
-                    <a href="#" class="search__link" @click="inputFocus">
+                    <span class="search__link" @click="inputFocus">
                         <i class="fa-solid fa-magnifying-glass search__icon"></i>
-                    </a>
+                    </span>
                     <input
                         type="text"
                         placeholder="Enter the name of the city"
@@ -17,8 +17,8 @@
                         ref="weatherInput"
                         
                     >
-                    <button @click="clearText" class="search__btn search__btn_remove"><i class="fa-solid fa-xmark search__icon"></i></button>
-                    <button @click="getCurrentLocation" class="search__btn"><i class="fa-solid fa-location-crosshairs search__icon"></i></button>
+                    <button @click="clearText" aria-label="btn-cancel" class="search__btn search__btn_remove"><i class="fa-solid fa-xmark search__icon"></i></button>
+                    <button @click="getCurrentLocation" aria-label="btn-location" class="btn__search search__btn"><i class="fa-solid fa-location-crosshairs search__icon"></i></button>
                 </div>
                 <div class="search__result-box">
                     <ul v-if="mapSearchResults">

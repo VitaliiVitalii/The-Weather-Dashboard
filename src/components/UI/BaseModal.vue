@@ -1,12 +1,14 @@
 <template>
     <Teleport to="body">
-        <div v-show="modalActive" class="modal">
-            <div class="modal__wrapper" >
-                <slot>
-                    
-                </slot>
+        <Transition>
+            <div v-show="modalActive" class="modal">
+                <div class="modal__wrapper" >
+                    <slot>
+            
+                    </slot>
+                </div>
             </div>
-        </div>
+        </Transition>
     </Teleport>
 </template>
 
@@ -21,4 +23,15 @@ defineProps({
 })
 
 </script>
+
+<style scoped>
+    .v-enter-active,
+    .v-leave-active {
+        transition: opacity 0.5s ease;
+    }
+    .v-enter-from,
+    .v-leave-to {
+    opacity: 0;
+    }
+</style>
 
