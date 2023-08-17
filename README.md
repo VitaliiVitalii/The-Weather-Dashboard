@@ -4,7 +4,7 @@ This simple project was created for the purpose of implementing acquired skills 
 
 ## Demo
 
-> the-weather-dashboard.vercel.app
+> https://the-weather-dashboard.vercel.app
 
 ## Features
 
