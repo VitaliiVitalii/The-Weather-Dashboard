@@ -3,7 +3,8 @@
 This simple project was created for the purpose of implementing acquired skills and abilities with VUE 3.
 
 ## Demo
-
+![image](https://github.com/VitaliiVitalii/The-Weather-Dashboard/assets/107180466/e4524d61-bb7c-43eb-b38b-b028a0e645cd)
+![image](https://github.com/VitaliiVitalii/The-Weather-Dashboard/assets/107180466/19b0fc38-7e16-4b52-a801-6dfe4ddd2345)
 > https://the-weather-dashboard.vercel.app
 
 ## Features
