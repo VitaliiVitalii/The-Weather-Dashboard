@@ -1,7 +1,7 @@
 <template>
     <header class="header">
         <div class="header__container flex">
-            <a class="logo__box flex" href="">
+            <a class="logo__box flex" href="https://the-weather-dashboard.vercel.app">
                 <svg class="logo__img">
                     <use xlink:href="../../assets/images/icons.svg#logo"></use>
                 </svg>
@@ -13,7 +13,7 @@
                         <span class="btn__icon"><i class=" icon fa-solid fa-plus"></i></span>
                         <span class="btn__text">add</span>
                     </button>
-                    <button @click="toggleModal" class="btn btn__info">
+                    <button @click="toggleModal" class="btn btn__info" aria-label="Info">
                         <span class="btn__icon"><i class="icon fa-solid fa-circle-info fa-lg"></i></span>
                         <span class="btn__text">info</span>
                     </button>

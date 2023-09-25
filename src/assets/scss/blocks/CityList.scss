@@ -59,6 +59,11 @@
 
     }
 
+    &__date {
+        grid-column: 1 / span 2;
+
+    }
+
     &__temp-amplitude {
         text-align: end;
 
